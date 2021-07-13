@@ -32,7 +32,6 @@ def __gamer_actions_handler(board, gamer_one, gamer_two):
         action = input("Ход игрока (%s): " % gamer_name)
         try:
             coordinate_x, coordinate_y = map(int, list(action))
-            print(coordinate_x, coordinate_y, (coordinate_x not in range(0, 3) and coordinate_y not in range(0, 3)) and board[coordinate_x][coordinate_y] != "_")
             if (coordinate_x not in range(0, 3) or coordinate_y not in range(0, 3)) or board[coordinate_x][coordinate_y] != "_":
                 raise ValueError
         except ValueError:
